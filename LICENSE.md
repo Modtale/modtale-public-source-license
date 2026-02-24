@@ -23,7 +23,7 @@ For the purposes of this License, the following terms shall have the meanings se
 
 2. "Source Code" means the preferred form of the Software for making modifications to it, including all modules it contains, plus any associated interface definition files, scripts used to control compilation and installation of an executable, and any other human-readable form.
 
-3. "Object Code" or "Compiled Binaries" means any form resulting from mechanical transformation or translation of the Source Code, including but not limited to compiled object code, generated documentation, and conversions to other media types.
+3. "Object Code" or "Compiled Binaries" means any executable builds, compiled artifacts, or packaged runtime distributions resulting from mechanical transformation or translation of the Source Code.
 
 4. "Contributor" means the copyright owner or entity authorized by the copyright owner that is making the Software available under this License, including the original Licensor and any subsequent contributors who submit modifications or additions.
 
@@ -31,7 +31,7 @@ For the purposes of this License, the following terms shall have the meanings se
 
 6. "Distribute" or "Convey" means to make available to a third party, whether by sale, lease, gift, or any other means of transfer, including but not limited to electronic transmission, physical delivery, or making accessible over a network.
 
-7. "Derivative Work" means a work based upon the Software, such as a revision, modification, translation, abridgment, condensation, expansion, or any other form in which the Software may be recast, transformed, or adapted, including in any form recognizably derived from the original, except that a work that constitutes a Collective Work will not be considered a Derivative Work for the purpose of this License.
+7. "Derivative Work" means a work based upon the Software, such as a revision, modification, translation, abridgment, condensation, expansion, or any other form in which the Software may be recast, transformed, or adapted, including in any form recognizably derived from the original.
 
 8. "Fork" means a separate version of the Software created by copying and modifying the Source Code, which may diverge from the original development path, and which is maintained independently but remains subject to this License.
 
@@ -43,11 +43,13 @@ For the purposes of this License, the following terms shall have the meanings se
 
 12. "Lead Maintainer" means the individual or entity designated as having primary responsibility for the ongoing development, maintenance, and governance of the Root Project, as determined by the Root Project's official governance documentation, bylaws, or established practices. The Lead Maintainer is initially the entity or individual who established the Root Project under this License. Succession of the Lead Maintainer role shall be governed solely by the Root Project's internal mechanisms, and no Fork, Derivative Work, or downstream project in the Fork Chain shall have independent authority to appoint or recognize a separate Lead Maintainer for purposes of this License. In the event of ambiguity or dispute regarding the identity of the Lead Maintainer, it shall be resolved by reference to the Root Project's canonical repository or official records, and no downstream maintainer shall usurp or claim such authority. For clarity, the Lead Maintainer is exclusively tied to the Root Project and does not extend to or vest in the maintainers of any Forks or Derivative Works, regardless of their independence or divergence.
 
-13. "Defunct State" means a condition in which the primary domain and official distribution infrastructure of the Modtale Platform are non-functional and inaccessible to the public for a continuous period of sixty (60) calendar days, as evidenced by objective indicators such as persistent domain resolution failures, server downtime, or official announcements of cessation.
+13. "Defunct State" means a condition in which the primary domain and official distribution infrastructure of the Modtale Platform are non-functional and inaccessible to the public for a continuous period of sixty (60) calendar days, as evidenced by objective indicators such as persistent domain resolution failures, server downtime confirmed by independent uptime monitors (e.g., third-party services like Downdetector or similar), or official announcements of cessation. Partial outages or regional downtime do not trigger this state unless they render the platform globally inaccessible.
 
 14. "Network Use" means making the Software or any modified version thereof available for interaction over a computer network, including but not limited to as a server, application programming interface (API), modification platform, hosted service, or any other form of remote access.
 
-15. "Private Use" means use of the Software solely for internal, non-commercial purposes by You, without Distribution to any third party.
+15. "Private Use" or "Internal Use" means use of the Software solely for Your own purposes, without Distribution to any third party, regardless of whether such use is commercial or non-commercial.
+
+16. "Third-Party Marketplaces" means any external platforms, repositories, or services that primarily function as centralized directories or catalogs for the discovery, browsing, downloading, and public distribution of user-generated modifications, add-ons, plugins, or similar customizable content for software applications or games, often featuring user ratings, reviews, search functionalities, and community-driven curation.
 
 ---
 ## 1. Grant of Copyright License (Source Code)
@@ -89,7 +91,7 @@ This obligation applies regardless of whether the Software is Distributed in Obj
 Notwithstanding the broad permissions granted for the Source Code in Sections 1 through 3 above, the following restrictions apply to the Distribution of Object Code or Compiled Binaries:
 
 ### 4.1 General Rule
-Compiled Binaries (including Object Code) of the Software, including all Forks, Derivative Works, and modified versions thereof, may only be Distributed exclusively through the Modtale Platform. Distribution of such Compiled Binaries through any third-party repositories, websites, hosting services, file-sharing platforms, app stores, or any other external means is strictly prohibited, whether directly or indirectly.
+Compiled Binaries (including Object Code) of the Software, including all Forks, Derivative Works, and modified versions thereof, may only be Distributed exclusively through the Modtale Platform or via mechanisms that source binaries directly from the Modtale Platform (e.g., APIs, automated downloads by clients or games, dependencies in build scripts). Distribution of such Compiled Binaries through Third-Party Marketplaces is strictly prohibited, whether directly or indirectly. For the avoidance of doubt, this restriction does not prohibit automated transfers of Compiled Binaries from a game server to its connected game clients, deployments or installations performed by server hosting providers for their hosted environments, or any similar direct or automated distribution mechanisms that do not utilize a Third-Party Marketplace.
 
 ### 4.2 Scope
 This restriction applies without exception to:
@@ -99,13 +101,13 @@ This restriction applies without exception to:
 * All Derivative Works based upon the Software;
 * All modified builds, patches, or enhancements to the Software;
 
-Regardless of whether the distributor is an individual, a commercial entity, a non-profit organization, or any other type of entity, and irrespective of whether the Distribution is for commercial gain or non-commercial purposes. This includes prohibitions on bundling the Compiled Binaries with other software, embedding them in hardware devices, or making them available via automated build systems outside the Modtale Platform.
+Regardless of whether the distributor is an individual, a commercial entity, a non-profit organization, or any other type of entity, and irrespective of whether the Distribution is for commercial gain or non-commercial purposes. Public CI/CD artifacts (e.g., GitHub Releases or automated build outputs) are permitted if they direct users to source binaries from the Modtale Platform and do not host the binaries independently on third party marketplaces.
 
 ### 4.3 Private Use Exception
-Notwithstanding the foregoing, You may compile the Source Code into Object Code or Compiled Binaries and use such binaries solely for Your own Private Use, without any restriction, provided that such binaries are not Distributed, conveyed, or made available to any third party in any manner. This exception does not permit any form of sharing, even for testing or collaborative purposes, unless conducted entirely within the confines of Your private environment.
+Notwithstanding the foregoing, You may compile the Source Code into Object Code or Compiled Binaries and use such binaries solely for Your own Internal Use, without any restriction, provided that such binaries are not Distributed, conveyed, or made available to any third party in any manner. This exception does not permit any form of sharing, even for testing or collaborative purposes, unless conducted entirely within the confines of Your internal environment.
 
 ### 4.4 Enforcement
-Any attempt to circumvent this restriction, including through proxy distributions, mirroring, or unauthorized APIs, shall be considered a violation of this License. The Licensor reserves the right to monitor compliance and take appropriate action, including but not limited to seeking injunctive relief.
+Any attempt to circumvent this restriction, including through proxy distributions or unauthorized mirroring on prohibited platforms, shall be considered a violation of this License. The Licensor reserves all rights to enforce this License.
 
 ---
 ## 5. Sunset Clause
@@ -128,15 +130,15 @@ This prohibition includes, but is not limited to, incorporating the Software int
 ## 7. Termination
 Your rights under this License shall terminate automatically and immediately upon any violation of its terms, including but not limited to failure to comply with the copyleft requirements, Network Use provisions, or Binary Distribution restrictions.
 
-However, if You cure the violation within thirty (30) calendar days after receiving notice of the violation from the Licensor or any affected party, Your rights under this License shall be reinstated retroactively, provided that such cure fully remedies the breach and no irreparable harm has occurred.
+However, if You cure the violation within thirty (30) calendar days after receiving notice of the violation from the Licensor or any affected party, Your rights under this License shall be reinstated automatically and retroactively, provided that such cure fully remedies the breach and no irreparable harm has occurred.
 
-Termination of Your rights under this section does not terminate the licenses of any parties who have received copies or rights from You under this License, provided such parties remain in full compliance therewith. Reinstatement is automatic if You cure the violation as described, but repeated violations may result in permanent termination at the discretion of the Lead Maintainer of the Root Project.
+Termination of Your rights under this section does not terminate the licenses of any parties who have received copies or rights from You under this License, provided such parties remain in full compliance therewith. 
 
-In the event of termination, You must immediately cease all use, modification, and Distribution of the Software and destroy all copies in Your possession.
+In the event of termination, You must cease all further use, modification, and Distribution of the Software.
 
 ---
 ## 8. Lead Maintainer Relicensing Authority
-The Lead Maintainer of the Root Project, and only the Lead Maintainer of the Root Project, reserves the exclusive and irrevocable right, at any time and in its sole discretion, to relicense the entire Software, including all past, present, and future contributions thereto across the entire Fork Chain, under one of the following open source licenses:
+The Lead Maintainer of the Root Project, and only the Lead Maintainer of the Root Project, reserves the exclusive and irrevocable right, at any time and in its sole discretion, to relicense the Software as maintained by the Root Project, including all contributions thereto, to the extent rights are granted via the Contributor License Agreement, under one of the following open source licenses:
 
 * GNU Affero General Public License version 3.0 (AGPL-3.0);
 * GNU General Public License version 3.0 (GPL-3.0);
@@ -146,8 +148,8 @@ For absolute clarity, this relicensing authority does not extend to, and may not
 
 Upon the effective date of such relicensing, as announced by the Lead Maintainer of the Root Project through official channels associated with the Root Project:
 
-* This License (MPSL v1.0) shall terminate for all future Distributions and uses of the Software across the entire Fork Chain;
-* The newly selected license shall govern all subsequent dealings with the Software, including rights to existing copies in all projects within the Fork Chain, subject to the terms of the selected license.
+* This License (MPSL v1.0) shall terminate for all future Distributions and uses of the Software as maintained by the Root Project;
+* The newly selected license shall govern all subsequent dealings with the Software as maintained by the Root Project, including rights to existing copies, subject to the terms of the selected license.
 
 This authority extends to all contributions submitted under the Contributor License Agreement, and Contributors hereby grant the necessary permissions for such relicensing solely to the Lead Maintainer of the Root Project. No Contributor, licensee, or downstream project maintainer may challenge, interfere with, or purport to exercise this relicensing authority.
 
@@ -185,20 +187,20 @@ No amendment or modification of this License will be binding unless in writing a
 
 ---
 # Contributor License Agreement (CLA)
-By submitting a contribution to the Software (a "Contribution"), whether through code, documentation, bug reports, or any other means, You agree to the following terms, which form a binding agreement between You and the Project, with rights extending to the Root Project as defined in the License:
+By submitting a contribution to the Software (a "Contribution"), whether through code, documentation, bug reports, or any other means, and by explicitly agreeing to this CLA (e.g., via a signed agreement, contributor portal, or DCO+CLA bot enforcement), You agree to the following terms, which form a binding agreement between You and the Project, with rights extending to the Root Project as defined in the License:
 
 1. You retain full copyright ownership to Your Contribution, including all intellectual property rights therein.
 
 2. You hereby grant to the Project, the Root Project, and all recipients of the Software a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable license to Your Contribution under the terms of the Modtale Public Source License (MPSL v1.0), including the right to use, reproduce, modify, display, perform, and Distribute Your Contribution as part of the Software.
 
-3. You hereby grant to the Lead Maintainer of the Root Project (and exclusively to such Lead Maintainer, without extension to any downstream maintainers) an irrevocable, perpetual right to relicense Your Contribution, in whole or in part, under any of the following licenses: GNU Affero General Public License version 3.0 (AGPL-3.0), GNU General Public License version 3.0 (GPL-3.0), or MIT License, without further notice or consent from You. For clarity, this grant does not confer relicensing authority to any Fork, Derivative Work, or downstream project in the Fork Chain.
+3. You hereby grant to the Lead Maintainer of the Root Project (and exclusively to such Lead Maintainer, without extension to any downstream maintainers) an irrevocable, perpetual right to relicense Your Contribution, in whole or in part, under any of the following licenses: GNU Affero General Public License version 3.0 (AGPL-3.0), GNU General Public License version 3.0 (GPL-3.0), or MIT License, without further notice or consent from You. For clarity, this grant does not confer relicensing authority to any Fork, Derivative Work, or downstream project in the Fork Chain, and relicensing may only occur to one of these specified licenses.
 
 4. You represent and warrant that: (a) You are the original author of the Contribution or have sufficient rights to grant the licenses herein; (b) the Contribution does not infringe any third-party intellectual property rights, including copyrights, patents, trademarks, or trade secrets; (c) You have not previously assigned or encumbered the rights to the Contribution in a manner that conflicts with this CLA; and (d) if the Contribution is made on behalf of an employer or other entity, You are authorized to bind such entity to this CLA.
 
 5. You agree to notify the Project and the Root Project of any facts or circumstances of which You become aware that would make these representations inaccurate in any respect.
 
-6. This CLA applies to all Contributions You submit, past, present, and future, unless You explicitly withdraw consent in writing prior to submission, which withdrawal shall not affect previously submitted Contributions.
+6. This CLA applies to all Contributions You submit from the date of Your explicit acceptance of this CLA forward, unless You explicitly withdraw consent in writing prior to submission, which withdrawal shall not affect previously submitted Contributions.
 
 7. No fee or compensation is required for submitting a Contribution, and submission does not create any employment or contractual relationship beyond this CLA.
 
-8. This CLA shall be governed by the same jurisdiction as the License.
+8. This CLA shall be governed by the same laws and jurisdiction as the License.
