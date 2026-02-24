@@ -2,7 +2,7 @@
 
 The Modtale Public Source License (MPSL) is a strong copyleft license that requires source code disclosure for derivatives and network use, while restricting binary distribution exclusively to the Modtale Platform.
 
-Copyright © 2026 [Insert Project Name] Project and Contributors.
+Copyright © 2026 Modtale Project and Contributors.
 All rights reserved.
 
 ## Overview
